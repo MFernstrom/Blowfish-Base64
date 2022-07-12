@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 702
+  Left = 821
   Height = 460
-  Top = 231
+  Top = 248
   Width = 352
   Caption = 'Blowfish + Base64'
   ClientHeight = 460
