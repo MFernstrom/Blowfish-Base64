@@ -12,7 +12,7 @@ unit main;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, BlowFish, base64;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls, BlowFish, base64, LCLIntf;
 
 type
 
@@ -29,6 +29,7 @@ type
     StaticText2: TStaticText;
     StaticText3: TStaticText;
     procedure Button1Click(Sender: TObject);
+    procedure Image1Click(Sender: TObject);
     procedure InputClick(Sender: TObject);
     procedure KeyClick(Sender: TObject);
     procedure OutputClick(Sender: TObject);
@@ -57,6 +58,11 @@ begin
   en.WriteAnsiString(trim(Input.Text));
   en.Free;
   Output.Text := EncodeStringBase64(s1.DataString);
+end;
+
+procedure TForm1.Image1Click(Sender: TObject);
+begin
+  OpenURL('https://github.com/MFernstrom/Blowfish-Base64');
 end;
 
 procedure TForm1.InputClick(Sender: TObject);
